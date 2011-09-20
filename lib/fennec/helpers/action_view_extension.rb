@@ -37,3 +37,5 @@ module Fennec
     end
   end
 end
+
+ActionView::Base.send :include, Fennec::ActionViewExtension::InstanceMethods
