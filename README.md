@@ -6,7 +6,7 @@ twitter-bootstrap-rails project integrates Bootstrap CSS toolkit for Rails 3 pro
 ## Rails 3.1
 Include Bootstrap in Gemfile;
 
-    gem 'fennec'
+    gem 'fennec', '~> 2.0.0'
     
 or you can install from latest build;
 
@@ -14,13 +14,30 @@ or you can install from latest build;
     
 and run bundle install.
 
-Add necessary stylesheet file to app/assets/stylesheets/application.css
+Add necessary stylesheet file to app/assets/stylesheets/application.css.scss
 
-    *= require bootstrap-1.3.0
+    *= require_self
+    *= require bootstrap
+    *= require bootstrap-responsive
+    *= require docs
     
-or you can use minified version
+Also you can add javascript support, expend your application.js like this:
 
-    *= require bootstrap-1.3.0.min
+    //= require jquery
+    //= require jquery_ujs
+
+    //= require bootstrap-transition
+    //= require bootstrap-alert
+    //= require bootstrap-modal
+    //= require bootstrap-dropdown
+    //= require bootstrap-scrollspy
+    //= require bootstrap-tab
+    //= require bootstrap-tooltip
+    //= require bootstrap-popover
+    //= require bootstrap-button
+    //= require bootstrap-collapse
+    //= require bootstrap-carousel
+    //= require bootstrap-typeahead
     
 Not tested on Rails 3
 
